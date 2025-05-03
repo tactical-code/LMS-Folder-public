@@ -8,6 +8,8 @@ import Course from "../models/Course.js";
 //API Controller Function to Manage Clerk User with database
 export const clerkWebhooks = async (req, res)=>{
   try{
+    console.log("Clerk Webhook Payload:", req.body);
+
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
     await whook.verify(JSON.stringify(req.body), {
