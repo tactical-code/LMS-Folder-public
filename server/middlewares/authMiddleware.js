@@ -2,6 +2,7 @@ import { clerkClient } from "@clerk/express";
 
 export const protectEducator = async (req, res, next) =>{
   try {
+    console.log('req.auth:', req.auth);
     const userId = req.auth.userId
     const response = await clerkClient.users.getUser(userId)
 

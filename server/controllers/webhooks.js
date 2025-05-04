@@ -3,7 +3,7 @@ import User from "../models/User.js";
 import Stripe from "stripe";
 import { Purchase } from "../models/Purchase.js";
 import Course from "../models/Course.js";
-/* import { request, response } from "express"; */
+
 
 //API Controller Function to Manage Clerk User with database
 export const clerkWebhooks = async (req, res)=>{
