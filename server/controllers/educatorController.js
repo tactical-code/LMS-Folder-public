@@ -43,7 +43,7 @@ export const addCourse = async (req, res)=> {
     res.json({success: false, message: error.message})
   }
 }
-
+//gert user
 export const getEducatorCourses = async (req, res)=>{
   try {
     const educator = req.auth.userId
